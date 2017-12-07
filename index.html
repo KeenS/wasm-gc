@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+         var importObject = {
+             imports: {
+                 print: function(arg) {
+                     console.log(arg);
+                 }
+             }
+         };
+         fetch('gc.wasm').then(response =>
+             response.arrayBuffer()
+         ).then(bytes =>
+             WebAssembly.instantiate(bytes, importObject)
+         ).then(results => {
+             //
+         });
+        </script>
+    </body>
+</html>
