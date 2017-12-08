@@ -1,7 +1,7 @@
 (require 'uiop)
 (setf (readtable-case *readtable*) :invert)
 
-(defparameter *page-size* (* 16  1024))
+(defparameter *page-size* (* 64  1024))
 (defparameter *null-ptr* '(i32.const 0))
 (defparameter *sizeof-i32* 4)
 (defparameter *sizeof-i64* 8)
